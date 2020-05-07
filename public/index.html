@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>lcristian.me</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/x-template" id="item-template">
+        <li>
+            <div
+                    class="projects-title"
+                    :class="{bold: isFolder}"
+                    @click="toggle"
+                    @dblclick="makeFolder">
+                {{ item.name }}
+                <span v-if="isFolder">[{{ isOpen ? '-' : '+' }}]</span>
+            </div>
+            <ul v-show="isOpen" v-if="isFolder">
+                <tree-item
+                        class="item"
+                        v-for="(child, index) in item.children"
+                        :key="index"
+                        :item="child"
+                        @make-folder="$emit('make-folder', $event)"
+                        @add-item="$emit('add-item', $event)"
+                ></tree-item>
+<!--                <li class="add" @click="$emit('add-item', item)">+</li>-->
+            </ul>
+        </li>
+    </script>
+    <script type="application/javascript" src="javascripts/treeView.js" defer></script>
+</head>
+
+<body>
+<div class="page">
+    <canvas id="pixelPattern" width="800" height="150"></canvas>
+<!--    <script type="application/javascript" src="javascripts/gameOfLifeish.js"></script>-->
+
+    <hr class="rounded">
+    <div>
+        <img src="images/profileT.jpg" alt="Avatar" class="avatar">
+        <div class="presentation">
+            <p>
+                Geek, dog lover and society contributor.
+            </p>
+            <p>
+                Spare time rugby player. Multiple time national Champion.
+            </p>
+            <p>
+                Love playing with technologies and clusters.
+            </p>
+            <p>
+                Living in Denmark.
+            </p>
+        </div>
+
+        <ul id="projects">
+            <tree-item
+                    class="item"
+                    :item="treeData"
+                    @make-folder="makeFolder"
+                    @add-item="addItem"
+            ></tree-item>
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>

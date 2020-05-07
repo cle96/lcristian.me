@@ -1,0 +1,43 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #d2d2d2;
+}
+
+a {
+  color: #00B7FF;
+}
+
+hr.rounded {
+  border-top: 5px solid #CF9F01;
+  border-radius: 5px;
+}
+
+.page{
+  width: 800px;
+  padding: 1em;
+  margin: 0em auto;
+  border: 15px solid #357966;
+  opacity: 0.95;
+  background-color: #DBDAB1;
+  color: #852714;
+}
+
+.avatar {
+  vertical-align: top;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.presentation {
+  display: inline-table;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.projects-title {
+  margin-top: 30px;
+  font-size:medium;
+}
