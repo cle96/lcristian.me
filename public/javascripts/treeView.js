@@ -12,8 +12,8 @@
                 name: "This very own website",
                 children: [{
                     name:
-                        "\nIt became as an idea and curiosity to play with Terraform and design a free, performant and scalable solution for free hosting." +
-                        "\nMore can be seen on: "
+                        "\nIt became as an idea and curiosity to play with Terraform and design a free, performing and scalable solution for free hosting." +
+                        "\nMore can be seen on: https://github.com/cle96/cloud-free-tier-hosting"
                 }]
             },
             {
@@ -23,9 +23,10 @@
                         name: "After hearing about the sad death of the inventor of Game of Life I decided to play a tribute to him." +
                             "\n In the process of finalising the Game of Life I stumbled upon some rules, linear ones, that generate beautiful pattern." +
                             "\n I decided to version that and keep it as part of my website." +
-                            "Code is obviously on open: "
+                            "Code is obviously on open: https://github.com/cle96/game-of-lifeish "
                     }
-                ]
+                ],
+
             }]
     };
 
